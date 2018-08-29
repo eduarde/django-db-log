@@ -5,18 +5,18 @@ Django DB Log
 .. image:: https://badge.fury.io/py/django_db_log.svg
     :target: https://badge.fury.io/py/django_db_log
 
-.. image:: https://travis-ci.org/eduarde/django_db_log.svg?branch=master
-    :target: https://travis-ci.org/eduarde/django_db_log
+.. image:: https://travis-ci.org/eduarde/django-db-log.svg?branch=master
+    :target: https://travis-ci.org/eduarde/django-db-log
 
-.. image:: https://codecov.io/gh/eduarde/django_db_log/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/eduarde/django_db_log
+.. image:: https://codecov.io/gh/eduarde/django-db-log/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/eduarde/django-db-log
 
 Custom DB Log Handler for Django Projects.
 
 Documentation
 -------------
 
-The full documentation is at https://django_db_log.readthedocs.io.
+The full documentation is at https://django-db-log.readthedocs.io.
 
 Quickstart
 ----------
