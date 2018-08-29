@@ -1,5 +1,4 @@
 from __future__ import unicode_literals, absolute_import
-from django.conf import settings
 
 import django
 import os
@@ -9,7 +8,6 @@ DEBUG = True
 ALLOWED_HOSTS = ['127.0.0.1', ]
 BASE_DIR = os.path.dirname(os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))))
-
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -56,36 +54,36 @@ else:
         'django.middleware.clickjacking.XFrameOptionsMiddleware',
     )
 
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'formatters': {
-#         'verbose': {
-#             'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-#             'style': '{',
-#         },
-#         'simple': {
-#             'format': '{levelname} {message}',
-#             'style': '{',
-#         },
-#     },
-#     'handlers': {
-#         'log_db': {
-#             'level': 'ERROR',
-#             'class': 'django_db_log.handlers.DBHandler',
-#             'model': 'django_db_log.models.ErrorLog',
-#             'expiry': 86400,
-#             'formatter': 'verbose',
-#         },
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['log_db'],
-#             'level': 'ERROR',
-#             'propagate': True,
-#         },
-#     },
-# }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'log_db': {
+            'level': 'ERROR',
+            'class': 'django_db_log.handlers.DBHandler',
+            'model': 'django_db_log.models.ErrorLog',
+            'expiry': 86400,
+            # 'formatter': 'simple',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['log_db'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

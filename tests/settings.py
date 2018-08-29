@@ -2,6 +2,7 @@
 from __future__ import unicode_literals, absolute_import
 
 import django
+import logging
 
 DEBUG = True
 USE_TZ = True
@@ -31,3 +32,7 @@ if django.VERSION >= (1, 10):
     MIDDLEWARE = ()
 else:
     MIDDLEWARE_CLASSES = ()
+
+
+
+
