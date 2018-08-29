@@ -31,7 +31,7 @@ Add it to your `INSTALLED_APPS`:
 
     INSTALLED_APPS = (
         ...
-        'django_db_log.apps.DjangoDbLogConfig',
+        'django_db_log',
         ...
     )
 
@@ -48,10 +48,53 @@ Add Django DB Log's URL patterns:
         ...
     ]
 
+Add the LOGGING configuration in the settings.py file.
+
+.. code-block:: python
+
+    LOGGING = {
+        'version': 1,
+        'disable_existing_loggers': False,
+        'formatters': {
+            'verbose': {
+               'format': '[%(asctime)s] %(levelname)s %(module)s.%(funcName)s %(lineno)d: %(message)s'
+            },
+            'simple': {
+                'format': ' %(levelname)s  %(message)s',
+            },
+        },
+        'handlers': {
+            'log_db': {
+                'level': 'ERROR',
+                'class': 'django_db_log.handlers.DBHandler',
+                'model': 'django_db_log.models.ErrorLog',
+                'expiry': 86400,
+                'formatter': 'simple',
+            },
+        },
+        'loggers': {
+            'django': {
+                'handlers': ['log_db'],
+                'level': 'ERROR',
+                'propagate': False,
+            },
+        },
+    }
+
+Run migrations
+
+.. code-block:: python
+
+    python manage.py migrate
+
 Features
 --------
 
-* TODO
+* make cronjob to delete old logs
+* setup Travis CI
+* release on PyPI
+* create tags
+* create version for python 3.6
 
 Running Tests
 -------------
