@@ -59,12 +59,10 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-            'style': '{',
+           'format': '[%(asctime)s] %(levelname)s %(module)s.%(funcName)s %(lineno)d: %(message)s'
         },
         'simple': {
-            'format': '{levelname} {message}',
-            'style': '{',
+            'format': ' %(levelname)s  %(message)s',
         },
     },
     'handlers': {
@@ -80,7 +78,7 @@ LOGGING = {
         'django': {
             'handlers': ['log_db'],
             'level': 'ERROR',
-            'propagate': True,
+            'propagate': False,
         },
     },
 }
