@@ -9,6 +9,8 @@ class DatabaseLog(models.Model):
 
     class Meta:
         abstract = True
+        verbose_name = 'System Log Entry'
+        verbose_name_plural = 'System Log Entries'
 
     def __unicode__(self):
         return '{0} - {1}'.format(self.time, self.message[:100])
