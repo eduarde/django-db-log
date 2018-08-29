@@ -11,15 +11,13 @@ Tests for `django_db_log` models module.
 from django.test import TestCase
 
 from django_db_log import models
+import logging
+
+logger = logging.getLogger(__name__)
 
 
-class TestDjango_db_log(TestCase):
+class TestLogging(TestCase):
 
-    def setUp(self):
-        pass
+    def test_logger(self):
+        logger.error('Logger test')
 
-    def test_something(self):
-        pass
-
-    def tearDown(self):
-        pass

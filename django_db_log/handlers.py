@@ -3,7 +3,6 @@ import datetime
 import random
 from django.utils import timezone
 from logging import Handler
-from .models import GeneralLog
 
 
 class DBHandler(Handler, object):
@@ -24,10 +23,7 @@ class DBHandler(Handler, object):
         # big try block here to exit silently if exception occurred
         try:
             # instantiate the model
-            try:
-                model = self.get_model(self.model_name)
-            except:
-                model = GeneralLog
+            model = self.get_model(self.model_name)
 
             log_entry = model(level=record.levelname, message=self.format(record))
 
