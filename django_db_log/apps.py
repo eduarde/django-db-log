@@ -4,3 +4,4 @@ from django.apps import AppConfig
 
 class DjangoDbLogConfig(AppConfig):
     name = 'django_db_log'
+    verbose_name = 'Django DB Log'

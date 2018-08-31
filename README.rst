@@ -87,15 +87,6 @@ Run migrations
 
     python manage.py migrate
 
-Features
---------
-
-* make cronjob to delete old logs
-* setup Travis CI
-* release on PyPI
-* create tags
-* create version for python 3.6
-
 Running Tests
 -------------
 
@@ -117,3 +108,11 @@ Tools used in rendering this package:
 
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
+
+TO DO
+--------
+
+* make cronjob to delete old logs
+* release on PyPI
+* create tags
+
