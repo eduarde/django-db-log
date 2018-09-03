@@ -53,6 +53,7 @@ setup(
     author_email='eduard.erja@gmail.com',
     url='https://github.com/eduarde/django_db_log',
     packages=[
+        'django-apscheduler==0.2.13',
         'django_db_log',
     ],
     include_package_data=True,
