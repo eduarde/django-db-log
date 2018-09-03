@@ -18,6 +18,13 @@ Documentation
 
 The full documentation is at https://django-db-log.readthedocs.io.
 
+Features
+-------------
+
+* Capture logs and save them in database.
+* Examine logs in the administration page of the website.
+* Job scheduler to delete old logs from the database.
+
 Quickstart
 ----------
 
@@ -31,6 +38,7 @@ Add it to your `INSTALLED_APPS`:
 
     INSTALLED_APPS = (
         ...
+        'django_apscheduler',
         'django_db_log',
         ...
     )
@@ -111,6 +119,11 @@ Does the code actually work?
 Credits
 -------
 
+*  Django_APScheduler_
+
+.. _Django_APScheduler: https://github.com/jarekwg/django-apscheduler
+
+
 Tools used in rendering this package:
 
 *  Cookiecutter_
@@ -119,9 +132,4 @@ Tools used in rendering this package:
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
 
-TO DO
---------
-
-* release on PyPI
-* create tags
 
