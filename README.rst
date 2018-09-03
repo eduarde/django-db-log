@@ -81,6 +81,16 @@ Add the LOGGING configuration in the settings.py file.
         },
     }
 
+Add the following constants in your settings file. These will be used to determine the lookup days to delete old logs from db.
+
+.. code-block:: python
+
+    INTERVAL_SCHEDULER_JOB_SECONDS = 43200
+    GENERAL_LOGS_DELETE_DAYS = 2
+    INFO_LOGS_DELETE_DAYS = 2
+    DEBUG_LOGS_DELETE_DAYS = 2
+    ERROR_LOGS_DELETE_DAYS = 10
+
 Run migrations
 
 .. code-block:: python
@@ -112,7 +122,6 @@ Tools used in rendering this package:
 TO DO
 --------
 
-* make cronjob to delete old logs
 * release on PyPI
 * create tags
 

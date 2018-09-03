@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sites",
+    'django_apscheduler',
     "django_db_log",
 ]
 
@@ -36,3 +37,9 @@ else:
 
 
 
+# LOOKUP DAYS TO DELETE OLD LOGS
+INTERVAL_SCHEDULER_JOB_SECONDS = 43200
+GENERAL_LOGS_DELETE_DAYS = 2
+INFO_LOGS_DELETE_DAYS = 2
+DEBUG_LOGS_DELETE_DAYS = 2
+ERROR_LOGS_DELETE_DAYS = 10
