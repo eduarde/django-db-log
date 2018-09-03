@@ -1,7 +1,7 @@
 from datetime import datetime, timedelta
 from apscheduler.schedulers.background import BackgroundScheduler
 from django_apscheduler.jobstores import DjangoJobStore, register_events, register_job
-from .models import GeneralLog, DebugLog, InfoLog, ErrorLog
+from django_db_log.models import GeneralLog, DebugLog, InfoLog, ErrorLog
 from django.conf import settings
 
 scheduler = BackgroundScheduler()
