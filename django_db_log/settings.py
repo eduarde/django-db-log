@@ -16,7 +16,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    "django_db_log",
+    'django_apscheduler',
+    'django_db_log',
 ]
 
 DATABASES = {
@@ -103,3 +104,11 @@ TEMPLATES = [
         },
     },
 ]
+
+
+# LOOKUP DAYS TO DELETE OLD LOGS
+INTERVAL_SCHEDULER_JOB_SECONDS = 43200
+GENERAL_LOGS_DELETE_DAYS = 2
+INFO_LOGS_DELETE_DAYS = 2
+DEBUG_LOGS_DELETE_DAYS = 2
+ERROR_LOGS_DELETE_DAYS = 10

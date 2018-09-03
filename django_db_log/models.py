@@ -20,11 +20,11 @@ class GeneralLog(DatabaseLog):
     pass
 
 
-class DebugLog(DatabaseLog):
+class InfoLog(DatabaseLog):
     pass
 
 
-class InfoLog(DatabaseLog):
+class DebugLog(DatabaseLog):
     pass
 
 
