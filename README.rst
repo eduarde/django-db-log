@@ -14,7 +14,6 @@ Django DB Log
 .. image:: https://img.shields.io/pypi/wheel/django-db-log-plugin.svg
     :target: https://pypi.org/project/django-db-log-plugin/
 
-.. image:: https://img.shields.io/pypi/pyversions/pydicom.svg
     
 
 Custom DB Log Handler for Django Projects.
