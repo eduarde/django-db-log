@@ -2,8 +2,8 @@
 Django DB Log
 =============================
 
-.. image:: https://badge.fury.io/py/django_db_log.svg
-    :target: https://badge.fury.io/py/django_db_log
+.. image:: https://badge.fury.io/py/django-db-log-plugin.svg
+    :target: https://badge.fury.io/py/django-db-log-plugin
 
 .. image:: https://travis-ci.org/eduarde/django-db-log.svg?branch=master
     :target: https://travis-ci.org/eduarde/django-db-log
