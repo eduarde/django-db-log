@@ -9,6 +9,8 @@ try:
 except ImportError:
     from distutils.core import setup
 
+from setuptools import find_packages
+
 
 def get_version(*file_paths):
     """Retrieves the version from django_db_log/__init__.py"""
@@ -52,12 +54,11 @@ setup(
     author='Eduard Erja',
     author_email='eduard.erja@gmail.com',
     url='https://github.com/eduarde/django_db_log',
-    packages=[
-        'django_apscheduler',
-        'django_db_log',
-    ],
+    packages=find_packages(),
     include_package_data=True,
-    install_requires=['django-apscheduler==0.2.13'],
+    install_requires=[
+        'django-apscheduler==0.2.13',
+    ],
     license="MIT",
     zip_safe=False,
     keywords='django_db_log',
