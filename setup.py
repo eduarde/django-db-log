@@ -45,7 +45,7 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
-    name='django_db_log',
+    name='django_db_log_plugin',
     version=version,
     description="""Custom DB Log Handler for Django Projects.""",
     long_description=readme + '\n\n' + history,

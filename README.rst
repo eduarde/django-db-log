@@ -23,7 +23,7 @@ Quickstart
 
 Install Django DB Log::
 
-    pip install django_db_log
+    pip install django-db-log-plugin
 
 Add it to your `INSTALLED_APPS`:
 
