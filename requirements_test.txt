@@ -7,3 +7,4 @@ codecov>=2.0.0
 
 # Additional test requirements go here
 django-apscheduler==0.2.13
+model_mommy==1.6.0
