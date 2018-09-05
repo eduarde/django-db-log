@@ -6,6 +6,8 @@ omit =
     *site-packages*
     *tests*
     *.tox*
+    django_db_log/admin.py
+    django_db_log/settings.py
 show_missing = True
 exclude_lines =
     raise NotImplementedError
