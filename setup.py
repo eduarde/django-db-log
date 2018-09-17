@@ -53,7 +53,7 @@ setup(
     long_description=readme + '\n\n' + history,
     author='Eduard Erja',
     author_email='eduard.erja@gmail.com',
-    url='https://github.com/eduarde/django_db_log',
+    url='https://github.com/eduarde/django-db-log',
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
